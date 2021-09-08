@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+
+
+
+
+
+
+      <button id="show-modal">Learn More</button>
+
+
+
+<div class="overlay overlay--hidden"></div>
+<div class="modal modal--hidden">
+  <div class="modal__contents">
+  
+  
+    <form id="learn-more-form">
+      <div class="loginbox">
+    <div class="modal__close-bar">
+      <span class="cross">X</span>
+    </div>
+    
+        
+     <div class="imgaepart">
+        <div class="text">
+          <div class="heading_login">
+            <h1>Login</h1>
+          </div>
+         <p class="small_text">
+           <span>Get access to your Orders, Wishlist and </b>
+              Recommendations</span>
+         </p>
+         <div class="image_pop">
+           <img src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/login_img_c4a81e.png" alt="">
+         </div>
+         
+
+        </div>
+        <div class="center">
+        <div class="insertData">
+        
+              <div class="input-pop">
+              
+                  <from method="post">
+                     <div class="txt_field">
+
+                        <input type="text"required>
+                        <span></span>
+                       <label>Enter Email and mobile number</label>
+                     </div>
+                        <div class="txt_field">
+                      <input type="password"required >
+                      <span></span>
+                      <label>Enter Password</label>
+                       </div>
+                      <div class="terms">
+                        <p>By continuing, you agree to Flipkart's Terms of Use and Privacy Policy.</p>
+                      </div>
+                     <input type="Submit" value="Login">
+                     <div class="or">
+                       <h2>OR</h2>
+                     </div>
+                  </from>
+              <button class="_2KpZ6l _2HKlqd _3NgS1a">Request OTP</button>
+
+              <a class="link" href="/account/login?signup=true">New to Flipkart? Create an account</a>
+              </div>
+              
+</div>
+</div>
+
+          
+          
+          
+                 
+          
+
+
+<script type="text/javascript">
+
+const toggleModal = () => {
+  document.querySelector('.modal')
+    .classList.toggle('modal--hidden');
+  document.querySelector('.overlay')
+    .classList.toggle('overlay--hidden');
+}
+document.querySelector('#show-modal')
+  .addEventListener('click', toggleModal);
+
+document.querySelector('.overlay')
+  .addEventListener('click', toggleModal);
+
+document.querySelector('#learn-more-form')
+  .addEventListener('submit', (e) => {
+  e.preventDefault();
+  toggleModal();
+});
+
+document.querySelector('.modal__close-bar span')
+  .addEventListener('click', toggleModal);
+document.querySelector('.overlay')
+  .addEventListener('click', toggleModal);
+
+
+</script>
+</body>
+</html>
